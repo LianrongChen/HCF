@@ -50,8 +50,8 @@ class Model_Wrapper(object):
 
         print('----self.alg_type is {}----'.format(self.alg_type))
 
-        if self.alg_type in ['hccf']:
-            self.model = HCCF(self.n_users, self.n_items, self.emb_dim, self.layer_num, self.mess_dropout)
+        if self.alg_type in ['hcf']:
+            self.model = HCF(self.n_users, self.n_items, self.emb_dim, self.layer_num, self.mess_dropout)
         else:
             raise Exception('Dont know which model to train')
 

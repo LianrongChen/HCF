@@ -7,7 +7,7 @@ import torch.nn.functional as F
 #We would like to thank and offer our appreciation to them.
 #Original algorithm can be found in paper: Embedding App-Library Graph for Neural Third Party Library Recommendation. ESEC/FSE ’21
 
-class HCCF(nn.Module):
+class HCF(nn.Module):
     def __init__(self, n_users, n_items, embedding_dim, layer_num, dropout_list):
         super().__init__()
         self.n_users = n_users

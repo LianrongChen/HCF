@@ -1,7 +1,7 @@
 import argparse
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Run HCCF.")
+    parser = argparse.ArgumentParser(description="Run HCF.")
     parser.add_argument('--weights_path', nargs='?', default='',
                         help='Store model path.')
     parser.add_argument('--alpha1', type=float, default=0.45,
@@ -32,11 +32,11 @@ def parse_args():
                         help='Regularizations.')
     parser.add_argument('--lr', type=float, default=0.002,
                         help='Learning rate.')
-    parser.add_argument('--model_type', nargs='?', default='hccf',
-                        help='Specify the name of model (hccf).')
+    parser.add_argument('--model_type', nargs='?', default='hcf',
+                        help='Specify the name of model (hcf).')
     parser.add_argument('--adj_type', nargs='?', default='norm_adj',
                         help='Specify the type of the adjacency (laplacian) matrix from {plain, norm, mean}.')
-    parser.add_argument('--alg_type', nargs='?', default='hccf')
+    parser.add_argument('--alg_type', nargs='?', default='hcf')
     parser.add_argument('--gpu_id', type=int, default=0,
                         help='0 for NAIS_prod, 1 for NAIS_concat')
     parser.add_argument('--mess_dropout', nargs='?', default='[0.1,0.1,0.1]',
