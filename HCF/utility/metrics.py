@@ -74,7 +74,8 @@ def ndcg_at_k(r, k, method=1):
     Returns:
         Normalized discounted cumulative gain
     """
-    dcg_max = dcg_at_k(sorted(r, reverse=True), k, method)
+    r_max=sorted(r[:k], reverse=True)
+    dcg_max = dcg_at_k(r_max, k, method)
     if not dcg_max:
         return 0.
     return dcg_at_k(r, k, method) / dcg_max
